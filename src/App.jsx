@@ -16,7 +16,7 @@ function App() {
 
     setIsLoading(true);
     try {
-      const response = await fetch("https://aiapi-vdez.onrender.com//api/get", {
+      const response = await fetch("https://aiapi-vdez.onrender.com/api/get", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
