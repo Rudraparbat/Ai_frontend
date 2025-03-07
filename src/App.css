@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* Floating glow animation */
+@keyframes glow {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; filter: blur(15px); }
+  50% { transform: translateY(-20px) scale(1.1); opacity: 0.5; filter: blur(25px); }
+}
+
+@keyframes loading {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(0%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-glow {
+  animation: glow 6s infinite ease-in-out alternate;
+}
+
+.animate-loading {
+  animation: loading 2s infinite ease-in-out;
+}
