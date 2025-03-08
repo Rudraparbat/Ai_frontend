@@ -1,25 +1,36 @@
+/* App.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-
-/* Floating glow animation */
-@keyframes glow {
-  0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; filter: blur(15px); }
-  50% { transform: translateY(-20px) scale(1.1); opacity: 0.5; filter: blur(25px); }
-}
-
-@keyframes loading {
-  0% { transform: translateX(-100%); }
-  50% { transform: translateX(0%); }
-  100% { transform: translateX(100%); }
-}
-
 .animate-glow {
-  animation: glow 6s infinite ease-in-out alternate;
+  animation: glow 4s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.4;
+  }
 }
 
 .animate-loading {
-  animation: loading 2s infinite ease-in-out;
+  width: 0%;
+  animation: loading 2s infinite;
+}
+
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
 }
